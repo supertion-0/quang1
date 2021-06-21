@@ -1,0 +1,55 @@
+<mat-dialog-content class="mat-typography">
+    <form #requestForm="ngForm">
+        <div class="card-body" style="width: 780px;">
+            <div style="text-align: center;">
+                <h2>GỬI YÊU CẦU BỒI THƯỜNG</h2>
+            </div>
+            <div class="form-group">
+                <label>Họ và tên:</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Số điện thoại:</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Số CMND:</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Loại bảo hiểm</label>
+                <select class="form-control">
+                    <option value="1">Bảo hiểm chăm sóc y tế</option>
+                    <option value="2">Bảo hiểm phẫu thuật và điều trị đa khoa</option>
+                    <option value="3">Bảo hiểm tai nạn toàn diẹn</option>
+                    <option value="4">Bảo hiểm các bệnh lý nghiêm trọng</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="file" class="form-control" (change)="save($event)" multiple="multiple">
+                <br>
+                <span [innerHTML]="result"></span>
+            </div>
+            <!-- <div class="form-group">
+                <label>Các loại giấy tờ đính kèm</label>
+                <input type="file" class="file-input"
+       (change)="onFileSelected($event)" #fileUpload multiple="multiple">
+
+<div class="file-upload">
+
+   {{fileName || "No file uploaded yet."}}
+
+    <button mat-mini-fab color="primary" class="upload-btn"
+      (click)="fileUpload.click()">
+        <mat-icon>attach_file</mat-icon>
+    </button>
+</div>
+            </div> -->
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Hủy</button>
+    <button mat-button mat-dialog-close>Gửi</button>
+    
+</mat-dialog-actions>
